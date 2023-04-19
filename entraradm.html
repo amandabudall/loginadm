@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>uai</title>
-    <link rel="stylesheet" href="styleentrar.css">
+    <link rel="stylesheet" href="styleentraradm.css">
 </head>
 <body>
     <div class="box">
         <form>
-            <h2>Entrar</h2>
+            <h2>Entrar ADM</h2>
             <div class="inputBox">
-                <input type="text" required="required">
+                <input type="text" id="username" required="required">
                 <span>Username</span>
                 <i></i>
             </div>
             
             <div class="inputBox">
-                <input type="password" required="required">
+                <input type="password" id="password" required="required">
                 <span>Senha</span>
                 <i></i>
             </div>
@@ -27,6 +27,16 @@
             <input type="submit" value="Entrar">
         </form>
     </div>
+
+    <script>
+        function auth(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if(username== "admin@gmail.com" && password== "admin123"){
+                window.location.assign("pagdados.html")
+            }
+        }
+    </script>
 
 </body>
 </html>
